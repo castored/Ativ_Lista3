@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner entrada = new Scanner(System.in);
+     
+    int n;
+    int numero;
+    
+    //Leitura valor n do usuário
+    System.out.print("Digite o valor de n: ");
+    n = entrada.nextInt();
+    
+    // Verifica se n é válido
+    if (n <= 0){
+      System.out.println("Por favor, insira um número positivo. ");
+      return;
+      
+    }
+    
+    // Gera e imprime os primeiros n termos da série 
+    for (int i = 1; i <= n; i++){
+     	// O núemro a ser impresso na série 
+      numero = (i+2) / 2; // Cálculo baseado na lógica da série 
+      
+      	// Imprime o número duas vezes se não for múltiplo de 3
+      	if (i % 3 == 0){
+          System.out.print(numero + " ");
+        }else{
+          System.out.print(numero + " " + numero + " ");
+        }
+    }
+    
+    
+  }
+}
